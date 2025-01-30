@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html grids</title>
+
+    <style>
+        .container1{
+            background-color: plum;
+            border: 5px purple solid;
+            padding: 30px;
+            display: grid;
+            /*grid-template-columns: 30% auto 30%;
+            grid-template-rows: 150px 100px 80px;*/
+            grid-template: 150px 100px / auto auto;
+            /* grid-row-gap: 10px;
+            grid-column-gap:8px; */
+            grid-gap: 10px 20px;
+            margin: 20px;
+        }
+
+        .container1 .items{
+            border: 2px orangered solid;
+            padding: 10px;
+            /* margin: 3px; */
+            background-color:pink;
+        }
+
+        #i3{
+            /*grid-row-start: 3;*/         /*starts at a specfic row*/
+            /*grid-row-end: span 3;*/      /*spans n rows*/
+            /*grid-row-end: 6;*/           /*ends before a specfic row*/
+            grid-row: 2/span 3;            /*shorthand property*/
+        }
+
+        #i7{
+            /*grid-column-start: 1;
+            grid-column-end: span 2;*/
+            grid-column: 1/span 3;
+        }
+
+        #i9{
+            grid-area: 3/2/span 2/span 2;    /*shorthand property: row start/row end/column start/column end*/
+        }
+
+
+
+        .container2{
+            display:grid;
+            grid-template-columns: auto auto auto;
+            /* grid-gap:10px 10px; */
+        }
+
+        .container2 .items{
+            border: 2px solid gray;
+            padding: 0px;
+        }
+
+        .container2 #heading{
+            grid-column: 1/span 3;
+            grid-row-start: 1;
+            text-align: center;
+            background-color: azure;
+            font-size: larger;
+        }
+
+        .container2 #img1{
+            grid-column-start: 1;
+            grid-column-end: span 3;
+            grid-row-start: 2;
+            align-items: center;
+            background-color: rgb(236, 236, 236);
+        }
+
+        .container2 #img2{
+            height: 300px;
+            background-color: rgb(219, 219, 219);
+        }
+
+        .container2 #img3{
+            height: 300px;
+            background-color: rgb(219, 219, 219);
+        }
+
+        .container2 #img4{
+            height: 300px;
+            background-color: rgb(219, 219, 219);
+        }
+
+        .container2 #img5{
+            grid-column: 1/span 2;
+            height: 400px;
+            align-items: center;
+            background-color: rgb(236, 236, 236);
+        }
+
+        #caption5{
+            padding: 20px;
+            background-color: azure;
+            min-height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container1">
+        <div class="items">Item 1</div>
+        <div class="items">Item 2</div>
+        <div class="items" id="i3">Item 3</div>
+        <div class="items">Item 4</div>
+        <div class="items">Item 5</div>
+        <div class="items">Item 6</div>
+        <div class="items" id="i7">Item 7</div>
+        <div class="items">Item 8</div>
+        <div class="items" id="i9">Item 9</div>
+    </div>
+
+    <br><br><br>
+    
+    <div class="container2">
+        <div class="items" id="heading"><h1>Famous Tourism Places of India</h1></div>
+
+        <div class="items" id="img1">
+            <figure>
+                <img src="Images\tourism img1.webp" width="100%" height="500px">
+                <figcaption>Red Fort-Delhi</figcaption>
+            </figure>
+        </div>
+
+        <div class="items" id="img2">
+            <figure>
+                <img src="Images\tourism img2.jpg" height="250px" width="100%">
+                <figcaption>Taj Mahal-Agra</figcaption>
+            </figure>
+        </div>
+
+        <div class="items" id="img3">
+            <figure>
+                <img src="Images\tourism img3.jpg" height="250px" width="100%">
+                <figcaption>India Gate-Delhi</figcaption>
+            </figure>
+        </div>
+
+        <div class="items" id="img4">
+            <figure>
+                <img src="Images\tourism img4.jpg" height="250px" width="100%">
+                <figcaption>Golden Temple-Amritsar</figcaption>
+            </figure>
+        </div>
+
+        <div class="items" id="img5">
+            <figure>
+                <img src="Images\tourism img5.jpg" height="350" width="100%">
+                <figcaption>Hawa Mahal-Jaipur</figcaption>
+            </figure>
+        </div>
+
+        <div class="items" id="caption5">
+            <p><h3>India has many famous tourist places, including architectural wonders, beaches, and spiritual destinations.</h3> 
+                <ul>
+                    <li>
+                    <b>Architectural wonders</b>
+                        <ul type="circle">
+                            <li><b>Taj Mahal</b>
+                            A UNESCO World Heritage Site and one of the Seven Wonders of the World. It's considered a symbol of India's rich history and a masterpiece of Mughal architecture. 
+                            </li>
+                            <li><b>Amber Fort</b>
+                            Located in Jaipur, Rajasthan, this fort is an example of the state's rich history and architectural marvels. 
+                            </li>
+                            <li><b>Mehrangarh Fort</b>
+                            Located in Jodhpur, Rajasthan, this fort is an example of the state's rich history and architectural marvels. 
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li><b>Beaches</b>
+                        <ul type="circle">
+                            <li>Goa: A popular beach destination known for its vibrant nightlife and picturesque beaches.</li>
+                        </ul>
+                    </li>
+
+                    <li><b>Spiritual destinations</b>
+                        <ul type="circle">
+                            <li>Varanasi: Located on the banks of the Ganges River, this city is known for its ancient temples, ghats, and vibrant religious festivals. It's considered the spiritual capital of India.</li>
+                        </ul>
+                    </li>
+
+                    <li><b>Other famous tourist places</b>
+                        <ul type="circle">
+                            <li>Ladakh, Kerala, Khajuraho, Darjeeling, Manali, and Nainital.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
